@@ -23,4 +23,4 @@ SET date_written = FROM_UNIXTIME(@var1/1000)
 ;
 
 
--- mysql -u root < models/mysql/answers.sql
+-- mysql -u root < models/schemas/mysql/answers.sql

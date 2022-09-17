@@ -16,4 +16,4 @@ ignore 1 lines
 ;
 
 
--- mysql -u root < models/mysql/answers_photos.sql
+-- mysql -u root < models/schemas/mysql/answers_photos.sql
