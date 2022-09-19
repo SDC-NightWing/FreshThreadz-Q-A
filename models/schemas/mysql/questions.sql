@@ -21,5 +21,5 @@ ignore 1 lines
 SET date_written = FROM_UNIXTIME(@var1/1000)
 ;
 
-
+ALTER TABLE questions ADD INDEX product_id_reported_idx(product_id, reported);
 -- mysql -u root < models/schemas/mysql/questions.sql
