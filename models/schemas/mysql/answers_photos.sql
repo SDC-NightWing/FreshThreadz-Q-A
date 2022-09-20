@@ -8,7 +8,8 @@ url VARCHAR(255) NOT NULL,
 FOREIGN KEY(answer_id) REFERENCES answers(id)
 );
 
-LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/answers_photos.csv'
+-- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/answers_photos.csv'
+LOAD DATA INFILE 'answers_photos.csv'
 INTO TABLE answers_photos
 fields terminated by ','
 optionally enclosed by '"'
