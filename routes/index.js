@@ -7,4 +7,8 @@ const answers = require('./answers')
 router.use('/questions', questions)
 router.use('/answers', answers)
 
+router.get('/', (req, res) => {
+  res.send('it works')
+})
+
 module.exports = router;

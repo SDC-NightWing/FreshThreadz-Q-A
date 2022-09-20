@@ -10,5 +10,5 @@ app.use(express.json())
 app.use('/qa', router)
 
 app.listen(PORT, () => {
-  console.log(`App is listenming on port ${PORT}`)
+  console.log(`App is listening on port ${PORT}`)
 })
