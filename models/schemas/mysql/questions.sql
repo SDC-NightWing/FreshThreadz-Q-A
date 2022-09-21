@@ -13,7 +13,7 @@ helpful INTEGER DEFAULT 0
 );
 
 -- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/questions.csv'
-LOAD DATA INFILE 'questions.csv'
+LOAD DATA LOCAL INFILE 'questions.csv'
 INTO TABLE questions
 fields terminated by ','
 optionally enclosed by '"'
