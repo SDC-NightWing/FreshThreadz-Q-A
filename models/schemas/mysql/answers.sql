@@ -14,7 +14,7 @@ FOREIGN KEY(question_id) REFERENCES questions(id)
 );
 
 -- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/answers.csv'
-LOAD DATA INFILE 'answers.csv'
+LOAD DATA LOCAL INFILE 'answers.csv'
 INTO TABLE answers
 fields terminated by ','
 optionally enclosed by '"'
