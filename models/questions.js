@@ -9,42 +9,43 @@ exports.get = async (product_id, page, count) => {
 
   const sql = `
   SELECT
-  q.id AS question_id,
-    q.body AS question_body,
+      q.id AS question_id,
+      q.body AS question_body,
       q.date_written AS question_date,
-        q.asker_name,
-        q.helpful AS question_helpfulness,
-          q.reported,
-          (SELECT
-          JSON_OBJECTAGG(id, answer)
+      q.asker_name,
+      q.helpful AS question_helpfulness,
+      q.reported,
+      IFNULL((SELECT
+                  JSON_OBJECTAGG(id, answer)
+              FROM
+                  (SELECT
+                      a.id,
+                      JSON_OBJECT(
+                          "id", a.id,
+                          "body", a.body,
+                          "date", a.date_written,
+                          "answerer_name", a.answerer_name,
+                          "helpfulness", a.helpful,
+                          "photos", IFNULL((SELECT
+                                                JSON_ARRAYAGG(url) AS url
+                                            FROM
+                                                (SELECT
+                                                    answer_id, url
+                                                FROM
+                                                    answers_photos p
+                                                WHERE
+                                                    p.answer_id = a.id) AS tempPhotos)
+                                    ,JSON_ARRAY())
+                      ) AS answer
+                  FROM
+                      answers a
+                  WHERE
+                      a.question_id = q.id AND a.reported = false) AS temp)
+      ,JSON_OBJECT()) AS answers
   FROM
-    (SELECT
-      a.id,
-      JSON_OBJECT(
-      "id", a.id,
-      "body", a.body,
-      "date", a.date_written,
-      "answerer_name", a.answerer_name,
-      "helpfulness", a.helpful,
-      "photos", (SELECT
-        JSON_ARRAYAGG(url) AS url
-    FROM
-        (SELECT
-        answer_id, url
-    FROM
-        answers_photos p
-    WHERE
-        p.answer_id = a.id) AS tempPhotos)
-      ) AS answer
-          FROM
-              answers a
-          WHERE
-              a.question_id = q.id AND a.reported = false) AS temp
-              ) AS answers
-  FROM
-  questions q
+      questions q
   WHERE
-  q.product_id = ? AND q.reported = false
+      q.product_id = ? AND q.reported = false
   LIMIT ? OFFSET ?
   `
   const inserts = [product_id, limit, offset]

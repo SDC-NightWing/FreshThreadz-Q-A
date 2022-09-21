@@ -6,30 +6,30 @@ exports.get = async (question_id, page, count) => {
 
   const sql = `
   SELECT
-    id AS answer_id,
-    body,
-    date_written AS 'date',
-    answerer_name,
-    helpful AS helpfulness,
-    (SELECT
-    JSON_ARRAYAGG(urls)
-    FROM
-      (SELECT
-      JSON_OBJECT('id', id, 'url', url) AS urls
-      FROM
-        (SELECT
-          id, url
-        FROM
-          answers_photos
-        WHERE
-          answer_id = a.id
-        ) AS t_photos
-      ) AS t_urls
-    ) AS photos
+      id AS answer_id,
+      body,
+      date_written AS 'date',
+      answerer_name,
+      helpful AS helpfulness,
+      IFNULL((SELECT
+                  JSON_ARRAYAGG(urls)
+              FROM
+                  (SELECT
+                      JSON_OBJECT('id', id, 'url', url) AS urls
+                  FROM
+                      (SELECT
+                          id, url
+                      FROM
+                          answers_photos
+                      WHERE
+                          answer_id = a.id
+                      ) AS t_photos
+                  ) AS t_urls)
+      , JSON_ARRAY()) AS photos
   FROM
-        answers a
+      answers a
   WHERE
-  question_id = ? AND reported = false
+      question_id = ? AND reported = false
   LIMIT ? OFFSET ?
   `
 
