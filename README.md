@@ -48,3 +48,7 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 -- How to fully utilize indexing  
 -- How to avoid full table scanning  
 -- How to avoid queries for invalid data
+
+### 6. Requirements
+See package.json file for details.
+
