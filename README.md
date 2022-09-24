@@ -50,7 +50,8 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 -- How to avoid queries for invalid data
 -- Besides client side connection pooing, try thread pooling 
 
+<hr>  
 
 ### 6. Requirements
-See package.json file for details.
+- See package.json file for details.
 
