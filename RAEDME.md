@@ -12,7 +12,9 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 #### @ 400 PEAK RPS 
 ![image](https://user-images.githubusercontent.com/94769046/192113079-52eaf6af-4add-4cd4-a4a5-0fbcec9ffa78.png)  
 #### @ 1500 PEAK RPS 
-![image](https://user-images.githubusercontent.com/94769046/192113111-5b5c5d90-86b4-410c-aa7b-8be9982f47cc.png)
+![image](https://user-images.githubusercontent.com/94769046/192113111-5b5c5d90-86b4-410c-aa7b-8be9982f47cc.png)  
+
+<hr>  
 
 ### 2. Deployement 
 - The MySQL DB and the initial server were deployed on AWS EC2 instance on US west region. 
@@ -21,17 +23,23 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 #### @ 1000 AVG RPS 
 ![image7](https://user-images.githubusercontent.com/94769046/192114161-c82364b7-c332-4270-9c66-78acdda22fa3.png)
 #### @ 2000 AVG RPS 
-![image3](https://user-images.githubusercontent.com/94769046/192114260-cf021ee4-f509-40d7-add3-2ab1026a8009.png)
+![image3](https://user-images.githubusercontent.com/94769046/192114260-cf021ee4-f509-40d7-add3-2ab1026a8009.png)  
+
+<hr>  
 
 ### 3. Implement Nginx Load Balancer with Round Robin algorithm around 2 host servers
 - After adding a nginx load balancer and an additional t2 micro server, it was able to handle 2k throughput at a latency of 161ms with 0% error rate.  
 #### @ 2000 AVG RPS 
-![image6](https://user-images.githubusercontent.com/94769046/192114562-52a53bee-44eb-4942-868d-a31bcf0afe71.png)
+![image6](https://user-images.githubusercontent.com/94769046/192114562-52a53bee-44eb-4942-868d-a31bcf0afe71.png)  
+
+<hr>  
 
 ### 4. Add Caching to Nginx Load Balancer  
 - Caching was added to the nginx load balancer. With caching, the servers were able to handle 2k throughput with 0% error rate with <125 latency  
 #### @ 2000 AVG RPS 
 ![image2](https://user-images.githubusercontent.com/94769046/192114781-1ca57132-0975-4b56-a994-3cb31f0d735b.png)
+
+<hr>  
 
 ### 5. Further Optimization  
 - I would consider add more servers and test the performance at different throughput 
