@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS sdc;
 USE sdc;
 DROP TABLE IF EXISTS questions ;
 CREATE TABLE IF NOT EXISTS questions
@@ -12,7 +13,6 @@ reported BOOLEAN DEFAULT 0,
 helpful INTEGER DEFAULT 0
 );
 
--- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/questions.csv'
 LOAD DATA LOCAL INFILE 'questions.csv'
 INTO TABLE questions
 fields terminated by ','

@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS sdc;
 USE sdc;
 DROP TABLE IF EXISTS answers_photos;
 CREATE TABLE IF NOT EXISTS answers_photos
@@ -8,7 +9,6 @@ url VARCHAR(255) NOT NULL,
 FOREIGN KEY(answer_id) REFERENCES answers(id)
 );
 
--- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/answers_photos.csv'
 LOAD DATA LOCAL INFILE 'answers_photos.csv'
 INTO TABLE answers_photos
 fields terminated by ','

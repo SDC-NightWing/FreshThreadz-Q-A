@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS sdc;
 USE sdc;
 DROP TABLE IF EXISTS answers;
 CREATE TABLE IF NOT EXISTS answers
@@ -13,7 +14,6 @@ helpful INTEGER DEFAULT 0,
 FOREIGN KEY(question_id) REFERENCES questions(id)
 );
 
--- LOAD DATA INFILE '/Users/qingzhouyan/hackreactor/SDC/Q&A/answers.csv'
 LOAD DATA LOCAL INFILE 'answers.csv'
 INTO TABLE answers
 fields terminated by ','
