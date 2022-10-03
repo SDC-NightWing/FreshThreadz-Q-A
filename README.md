@@ -48,7 +48,8 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 -- How to fully utilize indexing  
 -- How to avoid full table scanning  
 -- How to avoid queries for invalid data
--- Besides client side connection pooing, try thread pooling 
+-- Besides client side connection pooing, try thread pooling  
+-- Incorporate a in-memory database like Redis.
 
 <hr>  
 
