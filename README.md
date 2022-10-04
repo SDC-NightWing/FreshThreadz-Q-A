@@ -44,12 +44,14 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 ### 5. Further Optimization  
 - I would consider add more servers and test the performance at different throughput 
 - Verticle scaling is another option for optimiaztion, t2 micros with the AWS Free Tier was chosen 
+- Incorporate a in-memory database like Redis.
 - SQL optimization is also an option to consider. I would be interested in exploring to make my query more efficient.  
+-- Besides client side connection pooing, try thread pooling  
 -- How to fully utilize indexing  
 -- How to avoid full table scanning  
 -- How to avoid queries for invalid data
--- Besides client side connection pooing, try thread pooling  
--- Incorporate a in-memory database like Redis.
+
+
 
 <hr>  
 
