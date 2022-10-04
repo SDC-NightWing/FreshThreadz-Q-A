@@ -9,14 +9,14 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 
 - The data of Q&A is very relationally structured and the schemas are clear and unlikley to be changed. MySQL was chosen as the Q&A microservice is heavy on both write and read and fields like helpfulness and reported are constantly updated.
 - Benchmarking databases. MySQL performance for read/write queries with pooling and indexing.
-#### @ 400 PEAK RPS 
+#### @ 400 PEAK RPS - P95 6MS
 ![image](https://user-images.githubusercontent.com/94769046/192113079-52eaf6af-4add-4cd4-a4a5-0fbcec9ffa78.png)  
 #### @ 1500 PEAK RPS 
 ![image](https://user-images.githubusercontent.com/94769046/192113111-5b5c5d90-86b4-410c-aa7b-8be9982f47cc.png)  
 
 <hr>  
 
-### 2. Deployement 
+### 2. Deployement - P95 9MS
 - The MySQL DB and the initial server were deployed on AWS EC2 instance on US west region. 
 - At a latency less than 140ms the single server can handle 1000 RPS throughput with 0% error rate.   
 - The latency increased to 2800ms when the throughput increased to 2000 RPS which is unacceptable. 
