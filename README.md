@@ -9,9 +9,9 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 
 - The data of Q&A is very relationally structured and the schemas are clear and unlikley to be changed. MySQL was chosen as the Q&A microservice is heavy on both write and read and fields like helpfulness and reported are constantly updated.
 - Benchmarking databases. MySQL performance for read/write queries with pooling and indexing.
-#### @ 400 PEAK RPS - P95 6MS
+#### @ 400 PEAK RPS - P95 6MS Response Time
 ![image](https://user-images.githubusercontent.com/94769046/192113079-52eaf6af-4add-4cd4-a4a5-0fbcec9ffa78.png)  
-#### @ 1500 PEAK RPS - P95 9M
+#### @ 1500 PEAK RPS - P95 9M Response Time
 ![image](https://user-images.githubusercontent.com/94769046/192113111-5b5c5d90-86b4-410c-aa7b-8be9982f47cc.png)  
 
 <hr>  
