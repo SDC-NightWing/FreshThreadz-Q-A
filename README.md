@@ -6,7 +6,7 @@
 ## Details 
 
 ### 1. Database selection 
-- The Q&A data consists of questions, answers and answer photos.  
+- The Q&A data consists of questions, answers and answer photos. Database capacity is at millions size
 ![Screen Shot 2022-09-13 at 2 57 40 PM](https://user-images.githubusercontent.com/94769046/192113487-129af691-27db-435e-b9ea-ad9c9d3e1772.png)
 
 - The data of Q&A is very relationally structured and the schemas are clear and unlikley to be changed. MySQL was chosen as the Q&A microservice is heavy on read and fields like helpfulness and reported are constantly updated.
