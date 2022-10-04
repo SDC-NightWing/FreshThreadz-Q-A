@@ -1,5 +1,5 @@
 # Fresh Threadz Ecommerce Questions & Answers Microservice  
--  I worked with a group of 4 engineers together to rebuilt the back end system of an existing ecoomerce website to withstand higher traffic at about 1000 RPS with response time of 200 ms.  
+-  I worked with a group of 4 engineers together to rebuilt the back end system of an existing ecoomerce website to withstand higher traffic at about 2000 RPS with response time of 200 ms.  
 - I was responsible for Q&A section, which was created to rebuild the API, construct a database and server layer of the Q & A section.
 - Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It used 2 t2 micro host servers, 1 mySQL database, and 1 nginx load-balancer. It supported a throughput of 2K+ RPS across eight endpoints with 120ms latency and 0% error rate. 
 
