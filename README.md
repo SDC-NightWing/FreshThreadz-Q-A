@@ -18,7 +18,7 @@
 
 <hr>  
 
-### 2. DeployementS
+### 2. Deployement
 - The MySQL DB and the initial server were deployed on AWS EC2 instance on US west region. 
 - At a latency less than 140ms the single server can handle 1000 RPS throughput with 0% error rate.   
 - The latency increased to 2800ms when the throughput increased to 2000 RPS which is unacceptable. 
