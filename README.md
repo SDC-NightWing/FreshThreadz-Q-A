@@ -1,6 +1,6 @@
 # Fresh Threadz Ecommerce Questions & Answers Microservice  
-- Our team worked together to rebuilt the back end system of an existing ecoomerce website to withstand higher traffic at about 1000 RPS.  
-- Fresh threadz ecoomerce Q&A was created to rebuild the API, construct a database and server layer of the Q & A section of the whole back end system.  
+- Our team worked together to rebuilt the back end system of an existing ecoomerce website to withstand higher traffic at about 100 RPS with response time of 2s.  
+- I was responsible for Q&A section, which was created to rebuild the API, construct a database and server layer of the Q & A section of the whole back end system.  
 - Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It used 2 t2 micro host servers, 1 mySQL database, and 1 nginx load-balancer. It supported a throughput of 2K+ RPS across eight endpoints with 120ms latency and 0% error rate. 
 
 ## Details 
@@ -9,7 +9,7 @@
 - The Q&A data consists of questions, answers and answer photos.  
 ![Screen Shot 2022-09-13 at 2 57 40 PM](https://user-images.githubusercontent.com/94769046/192113487-129af691-27db-435e-b9ea-ad9c9d3e1772.png)
 
-- The data of Q&A is very relationally structured and the schemas are clear and unlikley to be changed. MySQL was chosen as the Q&A microservice is heavy on both write and read and fields like helpfulness and reported are constantly updated.
+- The data of Q&A is very relationally structured and the schemas are clear and unlikley to be changed. MySQL was chosen as the Q&A microservice is heavy on read and fields like helpfulness and reported are constantly updated.
 - Benchmarking databases. MySQL performance for read/write queries with connection pooling and indexing.
 #### @ 400 PEAK RPS - P95 6MS Response Time
 ![image](https://user-images.githubusercontent.com/94769046/192113079-52eaf6af-4add-4cd4-a4a5-0fbcec9ffa78.png)  
