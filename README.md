@@ -20,23 +20,23 @@ Fresh threadz ecoomerce Q&A microservice was deployed with AWS EC2 instances. It
 - The MySQL DB and the initial server were deployed on AWS EC2 instance on US west region. 
 - At a latency less than 140ms the single server can handle 1000 RPS throughput with 0% error rate.   
 - The latency increased to 2800ms when the throughput increased to 2000 RPS which is unacceptable. 
-#### @ 1000 AVG RPS 
+#### @ 1000 AVG RPS - Average 135ms Response Time
 ![image7](https://user-images.githubusercontent.com/94769046/192114161-c82364b7-c332-4270-9c66-78acdda22fa3.png)
-#### @ 2000 AVG RPS 
+#### @ 2000 AVG RPS - Average 2794ms Response Time
 ![image3](https://user-images.githubusercontent.com/94769046/192114260-cf021ee4-f509-40d7-add3-2ab1026a8009.png)  
 
 <hr>  
 
 ### 3. Implement Nginx Load Balancer with Round Robin algorithm around 2 host servers
 - After adding a nginx load balancer and an additional t2 micro server, it was able to handle 2k throughput at a latency of 161ms with 0% error rate.  
-#### @ 2000 AVG RPS 
+#### @ 2000 AVG RPS - Average 161ms Response Time
 ![image6](https://user-images.githubusercontent.com/94769046/192114562-52a53bee-44eb-4942-868d-a31bcf0afe71.png)  
 
 <hr>  
 
 ### 4. Add Caching to Nginx Load Balancer  
 - Caching was added to the nginx load balancer. With caching, the servers were able to handle 2k throughput with 0% error rate with <125 latency  
-#### @ 2000 AVG RPS 
+#### @ 2000 AVG RPS - Average 125ms Response Time
 ![image2](https://user-images.githubusercontent.com/94769046/192114781-1ca57132-0975-4b56-a994-3cb31f0d735b.png)
 
 <hr>  
