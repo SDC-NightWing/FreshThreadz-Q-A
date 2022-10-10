@@ -11,9 +11,9 @@
 
 - The schemas of the Q&A data are clear and unlikley to be changed. MySQL was chosen as the database.
 - Benchmarking databases. MySQL performance for read/write queries with connection pooling and indexing.
-#### @ 400 PEAK RPS - P95 6MS Response Time
+#### @ 400 PEAK RPS - P95 6ms Response Time
 ![image](https://user-images.githubusercontent.com/94769046/192113079-52eaf6af-4add-4cd4-a4a5-0fbcec9ffa78.png)  
-#### @ 1500 PEAK RPS - P95 9M Response Time
+#### @ 1500 PEAK RPS - P95 9ms Response Time
 ![image](https://user-images.githubusercontent.com/94769046/192113111-5b5c5d90-86b4-410c-aa7b-8be9982f47cc.png)  
 
 <hr>  
